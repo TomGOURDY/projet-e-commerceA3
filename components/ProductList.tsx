@@ -9,11 +9,8 @@ interface IproductListProps {
 
 const ProductList = (props: IproductListProps) => {
     return (
-        <div className={styles.ProductList}>
-            <Carousel>
-                {props.products.map((product, index) => <Product key={index} product={product}/>)}
-            </Carousel>
-        </div>
+    
+        <Carousel className={styles.productList}>{props.products.map((product, index) => <Product key={index} product={product}/>)}</Carousel>
     )
 }
 
